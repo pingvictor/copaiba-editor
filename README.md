@@ -1,101 +1,51 @@
-## ✨ **Recursos Principais**
+# COPAIBA TOUCH @ Alpha
 
-### 🔤 **Suporte a codificações**
+**Copaiba Web agora é COPAIBA TOUCH.**
 
-* Detecta automaticamente **UTF-8**, **Shift-JIS**, **ANSI/JIS** e outras variantes usadas por voicebanks japoneses.
-* Exibe corretamente **kanji, hiragana e katakana** em oto.ini legados.
-* Permite salvar em:
-
-  * **UTF-8 (OpenUTAU)**
-  * **ANSI / Shift-JIS (UTAU Legacy)**
+O **COPAIBA TOUCH** é um editor de `oto.ini` moderno e completo, otimizado para dispositivos móveis e interações de toque. Projetado para criadores de voicebanks UTAU que buscam produtividade, precisão visual e portabilidade.
 
 ---
 
-### 🎧 **Waveform & Edição Visual**
+## Visual e Performance
 
-* Waveform personalizável (cor, espessura, contraste).
-* Fundo da waveform com cores configuráveis.
-* Suporte ao **zoom horizontal e vertical**.
-* Navegação fluida entre fonemas (setas →).
-* Indicação visual automática do alias atual/selecionado.
+* **Design Premium e Alto Contraste**: Paleta baseada em Slate e Sky que garante visibilidade da waveform em diferentes condições de iluminação.
+* **Otimizado para Toque**: Barras de parâmetros com áreas de interação ampliadas e interface adaptável para smartphones.
+* **Engine de Renderização**: Visualização de áudio e espectrograma em tempo real com baixa latência em navegadores móveis.
 
 ---
 
-### 🌈 **Interação moderna e responsiva**
+## Recursos Principais
 
-* **Performance otimizada** (edição via QWERTY sem lag).
-* Divisões e painéis **redimensionáveis livremente**, estilo Windows.
-* Ícones reorganizados / corrigidos para evitar vazamentos na interface.
-* Sistema de **multi-seleção** (Shift + clique, Ctrl + clique) com destaque visual.
-* Histórico de ações e mensagens de log inteligentes.
+### Compatibilidade de Codificações
+* Detecção automática e suporte para Shift-JIS (UTAU Legado), UTF-8 (OpenUTAU), ANSI e outras variantes.
+* Exibição de kanji, hiragana e caracteres especiais sem erros de codificação.
 
----
+### Edição de Áudio
+* **Presets Fonéticos Rápidos**: Atalhos para configurar transições de CV, VC, VCV e VV com medidas padronizadas.
+* **Zoom Dinâmico**: Controle de zoom horizontal e vertical para ajustes de precisão.
+* **Undo e Redo**: Histórico completo de ações para reversão de alterações conforme necessário.
 
-### 🔬 **Ferramentas avançadas**
-
-* Visualização de **espectrograma**, integrado sob a waveform.
-* Filtro inteligente para navegação entre aliases.
-* Destaque automático da posição do usuário na lista de arquivos & aliases.
-* Integrado para fluxos avançados de edição de fonemas (CV, VC, VCV, CVC, etc.).
+### Experiência Mobile-First
+* **Mobile Footer Toolbar**: Barra inferior fixa com atalhos para Play, Navegação, Desfazer, Refazer e Renomear.
+* **Interface Flexível**: Painéis com redimensionamento automático para diferentes tamanhos de tela.
 
 ---
 
-## 🚀 **Por que o Copaiba (Editor de oto.ini) existe?**
+## Funcionalidades Técnicas
 
-Porque assim temos mais opções e também mantemos um ecossistema que pode ser funcional para as futuras gerações de UTAU.
-O Copaiba foi criado especialmente para:
-
-* Criadores de voicebank modernos
-* Usuários do UTAU Legado (0.419(e) e anteriores)
-* Usuários do OpenUtau
-* Produtores que trabalham com métodos estendidos
-* Quem precisa edição precisa, rápida e visual
-
-Ele combina **design moderno**, **usabilidade**, **compatibilidade total** e **velocidade real**.
+* **Parser de oto.ini**: Leitura robusta de arquivos mesmo com formatações irregulares.
+* **Espectrograma Integrado**: Análise de frequência sob a Waveform para auxílio na identificação fonética.
+* **Multi-Seleção**: Edição simultânea de múltiplos aliases na planilha de parâmetros.
+* **Segurança Móvel**: Implementação para permitir a importação de arquivos em navegadores móveis com restrições de segurança.
 
 ---
 
-## 🛠️ **Funcionalidades técnicas**
+## Ecossistema MiSC Labs
 
-* Parser robusto de oto.ini (tolerante a erros, quebras e formatações irregulares)
-* Engine de leitura multi-encoding (UTF-8 / ANSI / Shift-JIS)
-* Player de áudio integrado com controle básico (play/pause)
-* Salvar com normalização de espaços, acentos e caracteres especiais
-* Suporte completo a alias com espaços (ex: `b an`)
-* Log inteligente para debugging e diagnóstico
-* Sistema de extensões internas (badges, tooltips, avisos contextuais)
+O **COPAIBA TOUCH** integra a suíte de ferramentas do **POMAR LTS / MiSC Labs**, sendo o sucessor do Copaiba Web, com foco na modernização do fluxo de trabalho para produtores de voz sintética.
 
 ---
 
-## 🗂️ **Roadmap**
+## Contribuições e Comunidade
 
-* [ ] Exportação de lotes de alias CV-VC
-* [ ] Ferramentas automáticas de mapeamento fonético
-* [ ] Modo especialista com expressões regulares
-* [ ] Plugin para OREMO Web / MiSC Nexus
-* [ ] Player com scrubbing
-* [ ] Temas customizáveis
-
----
-
-## 🤝 Contribuições
-
-Contribuições são muito bem-vindas!
-
-Abra uma *issue* ou *pull request* com:
-
-* Problemas encontrados
-* Sugestões de melhoria
-* Traduções
-* Recursos adicionais
-
----
-
-## 🧪 Créditos & Comunidade
-
-O **Copaiba Web** faz parte do ecossistema **MiSC Labs**, junto de ferramentas como:
-
-* **MeuPhonemizer**
-* **MiSC Nexus DAW**
-* **OREMO Web**
-* **Mapa Global UTAU - Vsynth Brasil**
+Desenvolvido para a comunidade **UTAU Brasil**. Sugestões e relatos de problemas são fundamentais para o desenvolvimento deste projeto em fase Alpha.
