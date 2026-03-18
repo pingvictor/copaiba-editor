@@ -42,7 +42,7 @@ O **COPAIBA TOUCH** é um editor de `oto.ini` moderno e completo, otimizado para
 
 ## Ecossistema MiSC Labs
 
-O **COPAIBA TOUCH** integra a suíte de ferramentas do **POMAR LTS / MiSC Labs**, sendo o sucessor do Copaiba Web, com foco na modernização do fluxo de trabalho para produtores de voz sintética.
+O **COPAIBA TOUCH** integra a suíte de ferramentas do **Vysynth Brasil / MiSC Labs**, sendo o sucessor do Copaiba Web, com foco na modernização do fluxo de trabalho para produtores de voz sintética.
 
 ---
 

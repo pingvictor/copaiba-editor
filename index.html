@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>COPAIBA @ Editor de oto.ini</title>
+  <title>COPAIBA TOUCH @ Alpha</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,12 +19,12 @@
 <body class="theme-light">
   <!-- Header -->
   <header class="sticky top-0 z-10 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
-      <h1 class="text-2xl font-semibold">COPAIBA @ Editor de oto.ini</h1>
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+      <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">COPAIBA <span class="text-blue-600">TOUCH</span> <span class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 align-middle ml-1">Alpha</span></h1>
 
-      <div class="flex items-center gap-2 ml-auto">
-        <input id="pickFolder" type="file" webkitdirectory directory multiple accept="audio/wav" class="hidden" />
-        <input id="pickOto" type="file" accept=".ini,.txt" class="hidden" />
+      <div class="flex flex-wrap items-center gap-2 sm:ml-auto w-full sm:w-auto">
+        <input id="pickFolder" type="file" webkitdirectory directory multiple accept="audio/wav" class="sr-only" />
+        <input id="pickOto" type="file" accept=".ini,.txt" class="sr-only" />
 
         <select id="otoEncoding" class="px-2 py-1 rounded-lg border bg-transparent text-xs">
           <option value="auto" selected>Detecção automática</option>
@@ -76,7 +76,7 @@
                 <input id="filter" placeholder='Filtrar… (ex.: b ou "b r")'
                   class="w-full px-2 py-1 rounded-lg border bg-transparent text-sm" />
               </div>
-              <div class="flex items-center gap-3 text-xs text-muted">
+              <div class="flex flex-wrap items-center gap-3 text-xs text-muted">
                 <label class="flex items-center gap-1">
                   <input id="filterRegex" type="checkbox" class="accent-blue-500"> Regex
                 </label>
@@ -109,7 +109,7 @@
               <span id="currentName" class="font-medium">(nenhum arquivo)</span>
               <span id="srInfo" class="ml-2 text-muted text-xs"></span>
             </div>
-            <div class="flex items-center gap-2 text-xs text-muted">
+            <div class="flex flex-wrap items-center gap-2 text-xs text-muted mt-2 sm:mt-0">
               <div class="hidden sm:flex items-center gap-2">
                 <button id="btnPlay" class="px-2 py-1 rounded-lg border bg-transparent">▶️ Tocar/Pausar</button>
               </div>
@@ -176,8 +176,8 @@
             </div>
           </div>
           <div class="card-body p-2">
-            <div class="overflow-auto max-h-[50vh]">
-              <table class="w-full text-xs table-fixed border-collapse">
+            <div class="overflow-x-auto max-h-[50vh]">
+              <table class="w-full min-w-[600px] text-xs table-fixed border-collapse">
                 <thead class="grid-header">
                   <tr>
                     <th class="text-left px-2 py-1 border-b border-slate-200/60 w-[38%]">.wav</th>
@@ -241,10 +241,20 @@
 
             <!-- PRESETS RÁPIDOS -->
             <div class="border-t pt-3" style="border-color:var(--border);">
+              <div class="flex flex-col mb-4 gap-2">
+                <h3 class="text-xs font-semibold text-muted">Ajustes Rápidos de Fonema</h3>
+                <div class="flex flex-wrap gap-2">
+                  <button id="btnPresetCV" class="tag px-3 py-1 cursor-pointer hover:bg-blue-500/10 hover:border-blue-500">CV</button>
+                  <button id="btnPresetVC" class="tag px-3 py-1 cursor-pointer hover:bg-blue-500/10 hover:border-blue-500">VC</button>
+                  <button id="btnPresetVCV" class="tag px-3 py-1 cursor-pointer hover:bg-blue-500/10 hover:border-blue-500">VCV</button>
+                  <button id="btnPresetVV" class="tag px-3 py-1 cursor-pointer hover:bg-blue-500/10 hover:border-blue-500">VV</button>
+                </div>
+              </div>
+
               <div class="flex items-center justify-between mb-2 gap-2">
-                <h3 class="text-xs font-semibold text-muted">Presets rápidos (edição em lote)</h3>
-                <span class="text-[11px] text-muted">
-                  Aplicado nas linhas selecionadas (planilha ou lista). Valores salvos entre sessões.
+                <h3 class="text-xs font-semibold text-muted">Presets manuais (edição em lote)</h3>
+                <span class="text-[11px] text-muted hidden sm:inline">
+                  Aplicado nas selecionadas.
                 </span>
               </div>
 
@@ -317,6 +327,39 @@
       </section>
     </div>
   </main>
+
+  <!-- Espaço extra no fim do body para a barra mobile não esconder conteúdo -->
+  <div class="h-24 md:hidden"></div>
+
+  <!-- Mobile Footer Toolbar -->
+  <footer class="md:hidden fixed bottom-0 left-0 right-0 z-50 border-t p-2 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]" style="background-color: var(--bg); border-color: var(--border);">
+    <div class="max-w-7xl mx-auto flex justify-between items-center gap-1 overflow-x-auto px-1">
+      <button id="btnMobileUndo" class="footer-btn" title="Desfazer">
+        <span class="text-xl">↩️</span>
+        <span class="opacity-70">Desfazer</span>
+      </button>
+      <button id="btnMobileRedo" class="footer-btn" title="Refazer">
+        <span class="text-xl">↪️</span>
+        <span class="opacity-70">Refazer</span>
+      </button>
+      <button id="btnMobilePrev" class="footer-btn" title="Anterior">
+        <span class="text-xl">⏮️</span>
+        <span class="opacity-70">Anterior</span>
+      </button>
+      <button id="btnMobilePlay" class="footer-btn" title="Tocar">
+        <span class="text-xl">▶️</span>
+        <span class="opacity-70">Tocar</span>
+      </button>
+      <button id="btnMobileNext" class="footer-btn" title="Próximo">
+        <span class="text-xl">⏭️</span>
+        <span class="opacity-70">Próximo</span>
+      </button>
+      <button id="btnMobileRename" class="footer-btn" title="Renomear">
+        <span class="text-xl">✏️</span>
+        <span class="opacity-70">Renomear</span>
+      </button>
+    </div>
+  </footer>
 
   <!-- Dock para painéis minimizados -->
   <div id="dock" class="hidden"></div>
